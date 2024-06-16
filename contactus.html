@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+		<title> 
+		   ContactUs page
+		</title>	
+</head>
+
+<body>
+	<div>
+		Menu:
+		<a href="index.html">Home</a>
+		|
+		<a href="resource.html">Resource</a>
+		|
+		<a href="contactus.html">ContactUs</a>
+	</div>
+	<h2> ContactUs </h2>
+
+	<form name="contactUs">
+		<div class="contactUs">
+			<div class="input">
+				<input id="Name" type="text" class="input" placeholder="Name" value="" name="name">
+				<br /><br />
+				<input id="Email" type="text" class="input" placeholder="Email" name="email" value="">
+				<br /><br />
+				<input type="button" onclick="validateForm()" id="button" value="Submit" />
+				<input type= "reset" onclick="clearErrors()" name= "Reset" />
+			</div>
+		</div>
+		<p id="field1"></p>
+		<p id="field2"></p>
+	</form>
+
+	<script type="text/javascript">
+		//form validates for user inputs on Name and Email fields
+        function validateForm() {
+            let name = document.getElementById('Name');
+            let email = document.getElementById('Email');
+
+
+			if (name.value == "") {
+				document.getElementById("field1").innerHTML = "*CustomerName required";
+				name.focus();
+			}
+			if (email.value == "") {
+                document.getElementById("field2").innerHTML = "*Email required";
+                Email.focus();
+                return false
+            }            
+
+		}
+        function clearErrors() {
+			document.getElementById("field1").innerHTML = "";
+            document.getElementById("field2").innerHTML = "";
+           
+        }
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+		<title> 
+		   Feedback page
+		</title>	
+</head>
+
+<body>
+	<div>
+		Menu:
+		<a href="index.html">Home</a>
+		|
+		<a href="resource.html">Resource</a>
+		|
+		<a href="contactus.html">ContactUs</a> <!--added new menu item-->
+
+	</div>
+
+
+	<form id="myForm" action=" ">
+		<label>
+			<h3>Feedback:</h3>
+			<textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
+			<!--<input id="feedback" type="text" />-->
+		</label>
+		<br />
+		<input type="submit" value="Submit" />
+	</form>
+	<!--calling the external js file for feedback submission validation-->
+	<script type="text/javascript" src="feedbackformchk.js"></script>
+
+
+</body>
+
+</html>
